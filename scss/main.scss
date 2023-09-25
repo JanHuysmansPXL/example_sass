@@ -1,3 +1,46 @@
-body {
-  background-color: #72b7ff;
+$primary-color: #ff6c6c;
+$secondary-color: #657aff;
+$tertiary-color: #14ffe1;
+
+$font-lg: 2rem;
+$font-md: 1.6rem;
+$font-sm: 1rem;
+
+.nav {
+  color: $primary-color;
 }
+
+.banner h1 {
+  font-size: $font-lg;
+  color: $secondary-color;
+  text-align: center;
+}
+
+nav {
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: $font-sm;
+    color: $secondary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+/* - het bullet piont van het list-item binnen het nav element weg te halen
+- de basisstijl van de anchor-link binnen dat list-item wordt weggehaald.
+Gebruik verder de eerder gedefinieerde variabelen om de lettergrootte en de tekstkleur aan te passen.
+- Zorg er met een hover effect voor dat de tekstkleur van de anchor-link
+binnen het list-item wijzigt.*/
