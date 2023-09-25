@@ -1,0 +1,31 @@
+@use "global" as *;
+
+/*  NAVBAR  */
+
+.nav {
+  @include margin-padding(5px, 5px);
+  background-color: $primary-color;
+}
+
+nav {
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: $font-sm;
+    color: $secondary-color;
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.banner h1 {
+  font-size: $font-lg;
+  color: $secondary-color;
+  text-align: center;
+}
+
+.banner {
+  @include margin-padding(3px, 3px);
+}
+
+p {
+  @extend %background-primary;
+  font-size: increaseFontSize($font-sm);
+}

@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.footer {
+  @include margin-padding(3px, 3px);
+}
+
+.footer {
+  &:hover {
+    color: $primary-color;
+    @include transition(.5s);
+    background-color: $tertiary-color;
+    @include transition(1s);
+  }
+}

@@ -1,0 +1,34 @@
+/* VARIABLES */
+
+$primary-color: #ff6c6c;
+$secondary-color: #657aff;
+$tertiary-color: #2a1675;
+
+$font-lg: 2rem;
+$font-md: 1.6rem;
+$font-sm: 1rem;
+
+/*MIXINS */
+
+@mixin margin-padding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin transition($time...) {
+    transition: $time;
+}
+
+/* INSET */
+
+%background-primary {
+    background-color: azure;
+    color: $primary-color;
+    text-align: center;
+}
+
+/* FUNCTIONS */
+
+@function increaseFontSize($size) {
+    @return ($size * 2);
+}
