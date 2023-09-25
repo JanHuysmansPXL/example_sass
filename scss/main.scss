@@ -1,13 +1,27 @@
 $primary-color: #ff6c6c;
 $secondary-color: #657aff;
-$tertiary-color: #14ffe1;
+$tertiary-color: #2a1675;
 
 $font-lg: 2rem;
 $font-md: 1.6rem;
 $font-sm: 1rem;
 
+@mixin margin-padding($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
 .nav {
-  color: $primary-color;
+  @include margin-padding(5px, 5px);
+}
+
+.banner,
+.footer {
+  @include margin-padding(3px, 3px);
+}
+
+.nav {
+  background-color: $primary-color;
 }
 
 .banner h1 {
@@ -34,13 +48,35 @@ nav {
     font-size: $font-sm;
     color: $secondary-color;
     &:hover {
-      color: $primary-color;
+      color: $tertiary-color;
     }
   }
 }
 
-/* - het bullet piont van het list-item binnen het nav element weg te halen
-- de basisstijl van de anchor-link binnen dat list-item wordt weggehaald.
-Gebruik verder de eerder gedefinieerde variabelen om de lettergrootte en de tekstkleur aan te passen.
-- Zorg er met een hover effect voor dat de tekstkleur van de anchor-link
-binnen het list-item wijzigt.*/
+@mixin transition($time...) {
+  transition: $time;
+}
+
+.footer {
+    &:hover {
+      color: $primary-color;
+      @include transition(.5s);
+      background-color: $tertiary-color;
+     @include transition(1s);
+  }
+}
+
+%background-primary {
+  background-color: azure;
+  color: $primary-color;
+  text-align: center;
+}
+
+@function increaseFontSize($size) {
+  @return ($size * 2);
+}
+
+p {
+  @extend %background-primary;
+  font-size: increaseFontSize($font-sm);
+}
